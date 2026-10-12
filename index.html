@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>boutique</title>
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      <header class="shop-header">
+      <div  class="logo">&#9889 ISETK <span>shop</span></div>
+      <nav class="shop-nav">
+      <a href="#" class="active">Nouveautés</a>
+      <a href="#">Vetements</a>
+      <a href="#">Accessoires</a>
+      </nav>
+      <div class="cart-icon"> &#128722;<span id="cart-count">0</span></div>
+    </header>
+    <section class="hero-banner">
+        <h2>Portez fièrement les couleurs de votre département !</h2>
+        <p>Collection officielle Tech & Style - Édition Limitée</p>
+        </section>
+        <main class="products-grid">
+        <article class="product-card">
+        <span class="promo-badge">-20%</span>
+        <div class="product-img-placeholder">&#129445;</div>
+        <div class="product-info">
+        <span class="product-category">Vêtements</span>
+        <h3 class="product-title">Hoodie Oversized ISETK TI</h3>
+        <p class="product-desc">Sweat à capuche ultra-confortable, idéal pour coder au
+            labo.</p>
+            <div class="product-price-row">
+            <span class="price current-price">55 DT</span>
+            <span class="price old-price">69 DT</span>
+            </div>
+            <button class="add-to-cart-btn">Ajouter au panier</button>
+            </div>
+            </article>
+            <article class="product-card">
+            <span class="promo-badge new">New</span>
+            <div class="product-img-placeholder">&#9749;</div>
+            <div class="product-info">
+            <span class="product-category">Accessoires</span>
+            <h3 class="product-title">Mug Isotherme "Bug & Coffee"</h3>
+            <p class="product-desc">Garde le café chaud jusqu'à ce que le code compile san
+            s erreurs.</p>
+            <div class="product-price-row">
+                <span class="price current-price">25 DT</span>
+                </div>
+                <button class="add-to-cart-btn">Ajouter au panier</button>
+                </div>
+                </article>
+                <article class="product-card">
+                <span class="promo-badge">-15%</span>
+                <div class="product-img-placeholder">&#127922;</div>
+                <div class="product-info">
+                <span class="product-category">Accessoires</span>
+                <h3 class="product-title">Sac à dos Tech Étanche</h3>
+                <p class="product-desc">Compartiment renforcé pour PC portable 15.6 pouces.</p
+                    >
+                    <div class="product-price-row">
+                    <span class="price current-price">85 DT</span>
+                    <span class="price old-price">100 DT</span>
+                    </div>
+                    <button class="add-to-cart-btn">Ajouter au panier</button>
+                    </div>
+                    </article>
+                    <article class="product-card">
+                    <span class="promo-badge hot">Hot</span>
+                    <div class="product-img-placeholder">&#129506;</div>
+                    <div class="product-info">
+                    <span class="product-category">Vêtements</span>
+                    <h3 class="product-title">Casquette Brodée CyberSec</h3>
+                    <p class="product-desc">Style minimaliste avec logo brodé. Parfait pour masque
+                    r les nuits blanches.</p>
+                    <div class="product-price-row">
+                    <span class="price current-price">18 DT</span>
+                    </div>
+                    <button class="add-to-cart-btn">Ajouter au panier</button>
+                    </div>
+                    </article>
+                    </main>
+                    <footer>
+                    <p>&copy; 2026 ISET Kairouan - Département TI</p>
+                    </footer>
+                    <script>
+                        const buttons = document.querySelectorAll('.add-to-cart-btn');
+                        const cartCount = document.getElementById('cart-count');
+                        let count = 0;
+                        buttons.forEach(button => {
+                        button.addEventListener('click', () => {
+                        count++;
+                        cartCount.textContent = count;
+                        cartCount.parentElement.style.transform = "scale(1.2)";
+                        setTimeout(() => {
+                        cartCount.parentElement.style.transform = "scale(1)";
+                        }, 200);
+                        });
+                        });
+                        </script>
+                        </body>
+                        </html>
+
+  </body>
+</html>
